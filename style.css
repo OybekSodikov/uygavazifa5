@@ -1,0 +1,111 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.iteam {
+  width: 300px;
+  height: 300px;
+  background-color: cadetblue;
+  transition: 0.3s;
+
+  /* transform: translate(200px, 300px); /*capga pasga surish*/
+  /* transform: rotate(40deg); aylantirish */
+  /* transform: scale(2.3); katta kichik qilish */
+  /* transform: skew(30deg); burchaklarni yotqizish */
+  /* transform: rotateY(40deg);yotqizish */
+}
+.div1 {
+  display: flex;
+  gap: 20px;
+}
+.iteam1:hover {
+  transform: translatex(200px);
+}
+.iteam2:hover {
+  transform: rotate(60deg);
+}
+.iteam3:hover {
+    transform: scale(2) ;
+}
+.iteam4:hover {
+    transform: skewy(20deg);
+}
+.iteam5:hover {
+    background-color: yellow;
+    transform: translateX(200px)rotate(60deg);
+  }
+  .iteam6:hover{
+    background-color: green;
+    transform:rotate(240deg) scale(1.5) ;
+  }
+  .iteam7:hover{
+    background-color: rgb(188, 51, 81);
+    transform:translateX(100px) skewy(40deg) ;
+  }
+  .iteam8:hover{
+    background-color: green;
+    transform:rotate(0deg)
+  }
+  .iteam9:hover{
+    background-color: green;
+    transform: skewy(0deg);
+    
+    
+  }
+  .iteam11 {
+    width: 300px;
+    height: 300px;
+    background-color: cadetblue;
+    transition: 0.3s;
+  transform: rotate(60deg);
+    
+  }
+  .iteam12 {
+    width: 300px;
+    height: 300px;
+    background-color: cadetblue;
+    transition: 0.3s;
+    transform: skewy(20deg);
+  
+}
+button{
+    margin: 500px 1000px;
+    width: 300px;
+    height: 100px;
+    color: white;
+    font-size: 40px;
+    background-color: greenyellow;
+    position: relative;
+    display: block;
+    
+}
+
+button::after{
+    content: "";
+    width: 0x;
+    height: 10px;
+    background-color: aqua;
+    position: absolute;
+    display:block;
+    top: 0%;
+    left: 0;
+    transition: 2s;
+}
+button::before{
+    content: "";
+    width: 0;
+    height: 10px;
+    background-color: aqua;
+    position: absolute;
+    display:block;
+    bottom: 0%;
+    left: 0;
+    transition: 1s;
+}
+button:active::before{
+    width: 0;
+}
+button:hover::after{
+    width: 100%;
+}
